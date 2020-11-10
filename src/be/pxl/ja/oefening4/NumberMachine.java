@@ -1,4 +1,6 @@
-package be.pxl.ja.oefening1;
+package be.pxl.ja.oefening4;
+
+import be.pxl.ja.demo6.Service;
 
 import java.util.ArrayList;
 
@@ -12,8 +14,6 @@ public class NumberMachine {
 		}
 	}
 
-	/*
-	TODO: uncomment this method after the NumberFilter interface is created.
 	public String processNumbers(NumberFilter filter) {
 		String result = "";
 		for(int i=0;i<numbers.size();i++) {
@@ -26,5 +26,17 @@ public class NumberMachine {
 		}
 		return result;
 	}
-	*/
+
+	public String convertNumbers(){
+		StringBuilder result = new StringBuilder();
+		Service<String, Integer> convert = Integer::toHexString;
+		numbers.forEach((number) -> {
+			if(result.length() > 0) {
+				result.append("-");
+			}
+			result.append(convert.execute(number));
+		});
+		return result.toString();
+	}
+
 }

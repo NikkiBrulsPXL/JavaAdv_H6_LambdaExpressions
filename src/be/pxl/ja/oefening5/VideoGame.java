@@ -1,4 +1,4 @@
-package be.pxl.ja.oefening2;
+package be.pxl.ja.oefening5;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -13,8 +13,7 @@ public class VideoGame {
         this.name = name;
         this.price = price;
         this.score = score;
-        for(int i=0;i<genres.length;i++)
-            this.genres.add(genres[i].toLowerCase());
+        for (String genre : genres) this.genres.add(genre.toLowerCase());
     }
 
     public String getName() {

@@ -1,4 +1,4 @@
-package be.pxl.ja.oefening1;
+package be.pxl.ja.oefening4;
 
 
 import org.junit.jupiter.api.Test;
